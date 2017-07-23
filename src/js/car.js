@@ -1,4 +1,4 @@
-var car = {
+const car = {
 	color: 'white',
 	dours: 4,
 	speed: 0,
@@ -11,6 +11,11 @@ var car = {
 			this.passengers.push(true);
 		}
 	},
-
+	land() {
+		this.passengers.pop();
+		if (this.passengers.length === 0) {
+			this.speed = 0;
+		}
+	}
 };
 
