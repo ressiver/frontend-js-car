@@ -16,6 +16,19 @@ const car = {
 		if (this.passengers.length === 0) {
 			this.speed = 0;
 		}
+	},
+	drive(newSpeed) {
+		if (this.passengers.length > 0 && typeof newSpeed !== 'undefined') {
+			this.speed = newSpeed;
+		} else {
+			this.speed = this.defaultSpeed;
+		}
+		if (newSpeed > this.maxSpeed) {
+			this.speed = this.maxSpeed;
+		}
+		if (this.passengers.length === 0 || this.speed !== 'Indefinite') {
+			return false;
+		}
 	}
 };
-
+export default car;
