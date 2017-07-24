@@ -28,7 +28,7 @@ const car = {
 		if (newSpeed > this.maxSpeed) {
 			this.speed = this.maxSpeed;
 		}
-		if (this.speed !== 'Indefinite') {
+		if (this.speed > this.maxSpeed) {
 			return false;
 		}
 	}
