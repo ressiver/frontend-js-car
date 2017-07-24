@@ -28,6 +28,9 @@ const car = {
 		if (newSpeed > this.maxSpeed) {
 			this.speed = this.maxSpeed;
 		}
+		if (this.speed !== 'Indefinite') {
+			return false;
+		}
 	}
 };
 export default car;
